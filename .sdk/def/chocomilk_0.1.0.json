@@ -1,0 +1,241 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Chocomilk API",
+    "description": "Chocomilk API provides a user-friendly interface for accessing various multimedia resources. With features like video downloading, music playback, and image manipulation, developers can easily integrate a rich media experience into their applications.",
+    "version": "1.0.0",
+    "contact": {
+      "url": "https://chocomilk.amira.us.kg"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://chocomilk.amira.us.kg/v1",
+      "description": "Production server"
+    }
+  ],
+  "paths": {
+    "/youtube/search": {
+      "get": {
+        "summary": "YouTube Search",
+        "description": "Multipurpose api like downloading social media content and others. Search for YouTube videos by query.",
+        "operationId": "searchYouTube",
+        "tags": [
+          "YouTube"
+        ],
+        "parameters": [
+          {
+            "name": "query",
+            "in": "query",
+            "description": "Search query for YouTube videos",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "mrbeast"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response with YouTube search results",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string",
+                      "description": "Response status"
+                    },
+                    "results": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "videoId": {
+                            "type": "string",
+                            "description": "YouTube video ID"
+                          },
+                          "title": {
+                            "type": "string",
+                            "description": "Video title"
+                          },
+                          "thumbnail": {
+                            "type": "string",
+                            "description": "Video thumbnail URL"
+                          },
+                          "duration": {
+                            "type": "string",
+                            "description": "Video duration"
+                          },
+                          "channel": {
+                            "type": "string",
+                            "description": "Channel name"
+                          },
+                          "views": {
+                            "type": "string",
+                            "description": "View count"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request - missing or invalid query parameter",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/search/pinterest": {
+      "get": {
+        "summary": "Pinterest Search",
+        "description": "Search for Pinterest content by query. Returns pins, boards, and other Pinterest content matching the search query.",
+        "operationId": "searchPinterest",
+        "tags": [
+          "Search"
+        ],
+        "parameters": [
+          {
+            "name": "query",
+            "in": "query",
+            "description": "Search query for Pinterest content",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "minecraft"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response with Pinterest search results",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string",
+                      "description": "Response status"
+                    },
+                    "results": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "string",
+                            "description": "Pinterest pin ID"
+                          },
+                          "title": {
+                            "type": "string",
+                            "description": "Pin title"
+                          },
+                          "image": {
+                            "type": "string",
+                            "description": "Pin image URL"
+                          },
+                          "description": {
+                            "type": "string",
+                            "description": "Pin description"
+                          },
+                          "author": {
+                            "type": "string",
+                            "description": "Pin author/creator"
+                          },
+                          "url": {
+                            "type": "string",
+                            "description": "Pinterest pin URL"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request - missing or invalid query parameter",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Error": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "description": "Error status",
+            "example": "error"
+          },
+          "message": {
+            "type": "string",
+            "description": "Error message",
+            "example": "Invalid query parameter"
+          },
+          "code": {
+            "type": "integer",
+            "description": "Error code",
+            "example": 400
+          }
+        }
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "YouTube",
+      "description": "YouTube video search and download operations"
+    },
+    {
+      "name": "Search",
+      "description": "Search operations for various multimedia platforms"
+    }
+  ],
+  "externalDocs": {
+    "description": "Full API Documentation",
+    "url": "https://chocomilk.amira.us.kg"
+  }
+}

@@ -1,0 +1,21 @@
+# Guide
+
+guide: {
+  metrics: count: entity: 2
+  metrics: count: path: 2
+  metrics: count: method: 2
+
+  entity: search: {
+    path: "/search/pinterest": {
+      action: "pinterest": {}
+      op: list: method: *GET
+    }
+  }
+
+  entity: you_tube: {
+    path: "/youtube/search": {
+      op: list: method: *GET
+    }
+  }
+
+}

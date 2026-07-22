@@ -1,0 +1,25 @@
+# API Information
+
+
+main: {
+  kit: {
+    info: {
+      auth: false
+      contact: {
+        url: "https://chocomilk.amira.us.kg"
+      }
+      description: "Chocomilk API provides a user-friendly interface for accessing various multimedia resources. With features like video downloading, music playback, and image manipulation, developers can easily integrate a rich media experience into their applications."
+      servers: [
+        {
+          description: "Production server"
+          url: "https://chocomilk.amira.us.kg/v1"
+        }
+      ]
+      summary: "Chocomilk API provides a user-friendly interface for accessing various multimedia resources."
+      title: "Chocomilk API"
+      version: "1.0.0"
+      website: "https://chocomilk.amira.us.kg"
+    }
+  }
+}
+

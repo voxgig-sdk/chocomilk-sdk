@@ -1,0 +1,42 @@
+{
+  "existing": {
+    "you_tube": {
+      "YOU_TUBE00": {
+        "channel": "s3c",
+        "duration": "s3d",
+        "thumbnail": "s3e",
+        "title": "s3f",
+        "video_id": "VIDEO01",
+        "view": "s41"
+      },
+      "YOU_TUBE01": {
+        "channel": "s78",
+        "duration": "s79",
+        "thumbnail": "s7a",
+        "title": "s7b",
+        "video_id": "VIDEO01",
+        "view": "s7d"
+      },
+      "YOU_TUBE02": {
+        "channel": "sb4",
+        "duration": "sb5",
+        "thumbnail": "sb6",
+        "title": "sb7",
+        "video_id": "VIDEO01",
+        "view": "sb9"
+      }
+    }
+  },
+  "new": {
+    "you_tube": {
+      "you_tube_ref01": {
+        "channel": "sf0",
+        "duration": "sf1",
+        "thumbnail": "sf2",
+        "title": "sf3",
+        "video_id": "VIDEO01",
+        "view": "sf5"
+      }
+    }
+  }
+}

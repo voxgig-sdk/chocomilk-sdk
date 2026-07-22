@@ -1,0 +1,80 @@
+# Entity: you_tube
+
+main: kit: entity: you_tube: {
+
+  alias: field: {}
+
+  fields: [
+    {
+      name: "channel"
+      req: false
+      type: "`$STRING`"
+    }
+    {
+      name: "duration"
+      req: false
+      type: "`$STRING`"
+    }
+    {
+      name: "thumbnail"
+      req: false
+      type: "`$STRING`"
+    }
+    {
+      name: "title"
+      req: false
+      type: "`$STRING`"
+    }
+    {
+      name: "video_id"
+      req: false
+      type: "`$STRING`"
+    }
+    {
+      name: "view"
+      req: false
+      type: "`$STRING`"
+    }
+  ]
+
+  name: "you_tube"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          args: {
+            query: [
+              {
+                example: "mrbeast"
+                kind: "query"
+                name: "query"
+                orig: "query"
+                reqd: true
+                type: "`$STRING`"
+              }
+            ]
+          }
+          method: "GET"
+          orig: "/youtube/search"
+          parts: [
+            "youtube"
+            "search"
+          ]
+          select: {
+            exist: [
+              "query"
+            ]
+          }
+          transform: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

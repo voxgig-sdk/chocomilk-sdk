@@ -1,0 +1,22 @@
+# BasicYouTubeFlow
+
+main: kit: flow: BasicYouTubeFlow:
+{
+  entity: "you_tube",
+  kind: "basic",
+  name: "BasicYouTubeFlow",
+  step: [
+    {
+      op: "list",
+      valid: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "you_tube_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicYouTubeFlow"
+}
