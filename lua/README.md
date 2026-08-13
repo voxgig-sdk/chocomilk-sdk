@@ -219,9 +219,9 @@ data **directly** — there is no wrapper:
 
 Check `err` first (it is non-`nil` on failure), then use `value`:
 
-    local search, err = client:Search():load()
+    local search, err = client:Search():list()
     if err then error(err) end
-    -- search is the loaded record
+    -- search is the record list
 
 Only `direct()` returns a response envelope — a `table` with `ok`,
 `status`, `headers`, and `data` keys.
@@ -251,8 +251,8 @@ API path: `/search/pinterest`
 | `duration` |  |
 | `thumbnail` |  |
 | `title` |  |
-| `video_id` |  |
-| `view` |  |
+| `videoId` |  |
+| `views` |  |
 
 Operations: List.
 
@@ -309,8 +309,8 @@ Create an instance: `local you_tube = client:YouTube(nil)`
 | `duration` | `string` |  |
 | `thumbnail` | `string` |  |
 | `title` | `string` |  |
-| `video_id` | `string` |  |
-| `view` | `string` |  |
+| `videoId` | `string` |  |
+| `views` | `string` |  |
 
 #### Example: List
 

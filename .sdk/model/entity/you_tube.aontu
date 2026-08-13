@@ -26,12 +26,12 @@ main: kit: entity: you_tube: {
       type: "`$STRING`"
     }
     {
-      name: "video_id"
+      name: "videoId"
       req: false
       type: "`$STRING`"
     }
     {
-      name: "view"
+      name: "views"
       req: false
       type: "`$STRING`"
     }
@@ -68,7 +68,7 @@ main: kit: entity: you_tube: {
           }
           transform: {
             req: "`reqdata`"
-            res: "`body`"
+            res: "`body.results`"
           }
         }
       ]

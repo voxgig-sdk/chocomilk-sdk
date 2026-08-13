@@ -16,11 +16,11 @@
 import pytest
 
 from chocomilk_sdk import ChocomilkSDK
-from core.error import ChocomilkError
-from core.result import ChocomilkResult
-from core.response import ChocomilkResponse
-from core.spec import ChocomilkSpec
-from feature.base_feature import ChocomilkBaseFeature
+from chocomilk_sdk.core.error import ChocomilkError
+from chocomilk_sdk.core.result import ChocomilkResult
+from chocomilk_sdk.core.response import ChocomilkResponse
+from chocomilk_sdk.core.spec import ChocomilkSpec
+from chocomilk_sdk.feature.base_feature import ChocomilkBaseFeature
 
 
 def _client():

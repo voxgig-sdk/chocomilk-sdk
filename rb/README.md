@@ -119,7 +119,8 @@ Create a mock client for unit testing — no server required:
 ```ruby
 client = ChocomilkSDK.test
 
-# Entity ops return the bare mock record (raises on error).
+# Entity ops return the ENTITY (raises on error);
+# call data_get for the mock record.
 search = client.Search.list()
 puts search
 ```
@@ -256,8 +257,8 @@ API path: `/search/pinterest`
 | `duration` |  |
 | `thumbnail` |  |
 | `title` |  |
-| `video_id` |  |
-| `view` |  |
+| `videoId` |  |
+| `views` |  |
 
 Operations: List.
 
@@ -315,8 +316,8 @@ Create an instance: `you_tube = client.YouTube`
 | `duration` | `String` |  |
 | `thumbnail` | `String` |  |
 | `title` | `String` |  |
-| `video_id` | `String` |  |
-| `view` | `String` |  |
+| `videoId` | `String` |  |
+| `views` | `String` |  |
 
 #### Example: List
 

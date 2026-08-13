@@ -41,8 +41,8 @@ class YouTube
     public ?string $duration = null;
     public ?string $thumbnail = null;
     public ?string $title = null;
-    public ?string $video_id = null;
-    public ?string $view = null;
+    public ?string $videoId = null;
+    public ?string $views = null;
 }
 
 /** Request payload for YouTube#list. */
@@ -52,7 +52,7 @@ class YouTubeListMatch
     public ?string $duration = null;
     public ?string $thumbnail = null;
     public ?string $title = null;
-    public ?string $video_id = null;
-    public ?string $view = null;
+    public ?string $videoId = null;
+    public ?string $views = null;
 }
 

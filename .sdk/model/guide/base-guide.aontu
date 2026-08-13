@@ -9,12 +9,14 @@ guide: {
     path: "/search/pinterest": {
       action: "pinterest": {}
       op: list: method: *GET
+      op: list: transform: res: *("`body.results`")|top
     }
   }
 
   entity: you_tube: {
     path: "/youtube/search": {
       op: list: method: *GET
+      op: list: transform: res: *("`body.results`")|top
     }
   }
 

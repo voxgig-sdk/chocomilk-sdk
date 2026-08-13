@@ -135,6 +135,26 @@ const search = client.Search()
 | `title` | `string` | No |  |
 | `url` | `string` | No |  |
 
+### Actions
+
+This entity exposes custom API actions in addition to the standard
+operations. Select one with `$action` in the call's argument; the
+remaining keys are sent as that action's payload.
+
+| Action | Route | Call |
+| --- | --- | --- |
+| `pinterest` | `/search/pinterest` | `client.Search().list({ $action: 'pinterest', ... })` |
+
+An action returns that action's OWN response, which is not necessarily a
+Search record — check the API definition for its shape.
+
+```ts
+const result = await client.Search().list({
+  $action: 'pinterest',
+  /* ...the action's own arguments */
+})
+```
+
 ### Operations
 
 #### `list(match: object, ctrl?: object)`
@@ -187,8 +207,8 @@ const you_tube = client.YouTube()
 | `duration` | `string` | No |  |
 | `thumbnail` | `string` | No |  |
 | `title` | `string` | No |  |
-| `video_id` | `string` | No |  |
-| `view` | `string` | No |  |
+| `videoId` | `string` | No |  |
+| `views` | `string` | No |  |
 
 ### Operations
 

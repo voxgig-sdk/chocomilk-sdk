@@ -37,7 +37,7 @@ class YouTubeEntity extends ChocomilkEntityBase<YouTube> {
 
 
 
-  async list(this: any, reqmatch?: YouTubeListMatch, ctrl?: Control): Promise<YouTube[]> {
+  async list(this: any, reqmatch?: YouTubeListMatch, ctrl?: Control): Promise<YouTubeEntity[]> {
 
     const utility = this._utility
 

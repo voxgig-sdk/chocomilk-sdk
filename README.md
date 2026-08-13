@@ -38,9 +38,18 @@ network, and no credentials:
 ### TypeScript
 
 ```ts
-const client = ChocomilkSDK.test()
+// The offline mock starts EMPTY — seed it with the records the test needs.
+// Shape: { entity: { <entity-name>: { <id>: <record> } } }
+const client = ChocomilkSDK.test({
+  entity: {
+    search: {
+      test01: { id: 'test01' },
+    },
+  },
+})
 const searchs = await client.Search().list()
-// searchs is an array of bare Search records populated with mock data
+// searchs is an array of Search entities, populated with mock data
+// — call searchs[0].data() for the record itself
 console.log(searchs)
 ```
 
@@ -110,7 +119,7 @@ import { ChocomilkSDK } from '@voxgig-sdk/chocomilk'
 
 const client = new ChocomilkSDK()
 
-// List all searchs (returns Search[])
+// List all searchs (returns SearchEntity[] — .data() for the record)
 const searchs = await client.Search().list()
 for (const search of searchs) {
   console.log(search)
@@ -344,6 +353,9 @@ Pass custom features via the `extend` option at construction time.
 
 This SDK is generated from the upstream OpenAPI specification. It is an
 unofficial client and is not affiliated with the API provider.
+
+The OpenAPI spec(s) this SDK was generated from are kept in the
+[`.sdk/def/`](.sdk/def/) folder.
 
 - Upstream API: [https://chocomilk.amira.us.kg](https://chocomilk.amira.us.kg)
 

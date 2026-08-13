@@ -280,8 +280,8 @@ API path: `/search/pinterest`
 | `"duration"` |  |
 | `"thumbnail"` |  |
 | `"title"` |  |
-| `"video_id"` |  |
-| `"view"` |  |
+| `"videoId"` |  |
+| `"views"` |  |
 
 Operations: List.
 
@@ -342,8 +342,8 @@ Create an instance: `youTube := client.YouTube(nil)`
 | `duration` | `string` |  |
 | `thumbnail` | `string` |  |
 | `title` | `string` |  |
-| `video_id` | `string` |  |
-| `view` | `string` |  |
+| `videoId` | `string` |  |
+| `views` | `string` |  |
 
 #### Example: List
 

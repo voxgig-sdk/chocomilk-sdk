@@ -90,6 +90,7 @@ module ChocomilkConfig
                       },
                     ],
                   },
+                  "kind" => "http",
                   "method" => "GET",
                   "orig" => "/search/pinterest",
                   "parts" => [
@@ -104,7 +105,7 @@ module ChocomilkConfig
                   },
                   "transform" => {
                     "req" => "`reqdata`",
-                    "res" => "`body`",
+                    "res" => "`body.results`",
                   },
                   "index$" => 0,
                 },
@@ -148,14 +149,14 @@ module ChocomilkConfig
             },
             {
               "active" => true,
-              "name" => "video_id",
+              "name" => "videoId",
               "req" => false,
               "type" => "`$STRING`",
               "index$" => 4,
             },
             {
               "active" => true,
-              "name" => "view",
+              "name" => "views",
               "req" => false,
               "type" => "`$STRING`",
               "index$" => 5,
@@ -182,6 +183,7 @@ module ChocomilkConfig
                       },
                     ],
                   },
+                  "kind" => "http",
                   "method" => "GET",
                   "orig" => "/youtube/search",
                   "parts" => [
@@ -195,7 +197,7 @@ module ChocomilkConfig
                   },
                   "transform" => {
                     "req" => "`reqdata`",
-                    "res" => "`body`",
+                    "res" => "`body.results`",
                   },
                   "index$" => 0,
                 },

@@ -21,7 +21,7 @@ class Config {
 
 
   main = {
-    name: 'ProjectName',
+    name: 'Chocomilk',
   }
 
 
@@ -121,6 +121,7 @@ class Config {
                   }
                 ]
               },
+              "kind": "http",
               "method": "GET",
               "orig": "/search/pinterest",
               "parts": [
@@ -135,7 +136,7 @@ class Config {
               },
               "transform": {
                 "req": "`reqdata`",
-                "res": "`body`"
+                "res": "`body.results`"
               },
               "index$": 0
             }
@@ -179,14 +180,14 @@ class Config {
         },
         {
           "active": true,
-          "name": "video_id",
+          "name": "videoId",
           "req": false,
           "type": "`$STRING`",
           "index$": 4
         },
         {
           "active": true,
-          "name": "view",
+          "name": "views",
           "req": false,
           "type": "`$STRING`",
           "index$": 5
@@ -213,6 +214,7 @@ class Config {
                   }
                 ]
               },
+              "kind": "http",
               "method": "GET",
               "orig": "/youtube/search",
               "parts": [
@@ -226,7 +228,7 @@ class Config {
               },
               "transform": {
                 "req": "`reqdata`",
-                "res": "`body`"
+                "res": "`body.results`"
               },
               "index$": 0
             }

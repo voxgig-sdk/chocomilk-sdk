@@ -155,8 +155,8 @@ local you_tube = client:YouTube(nil)
 | `duration` | `string` | No |  |
 | `thumbnail` | `string` | No |  |
 | `title` | `string` | No |  |
-| `video_id` | `string` | No |  |
-| `view` | `string` | No |  |
+| `videoId` | `string` | No |  |
+| `views` | `string` | No |  |
 
 ### Operations
 

@@ -63,7 +63,7 @@ describe('YouTubeEntity', async () => {
     const you_tube_ref01_ent = client.YouTube()
     const you_tube_ref01_match: any = {}
 
-    const you_tube_ref01_list = await you_tube_ref01_ent.list(you_tube_ref01_match)
+    const you_tube_ref01_list = (await you_tube_ref01_ent.list(you_tube_ref01_match)).map((e: any) => e.data())
 
 
   })

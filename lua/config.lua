@@ -89,6 +89,7 @@ local function make_config()
                     },
                   },
                 },
+                ["kind"] = "http",
                 ["method"] = "GET",
                 ["orig"] = "/search/pinterest",
                 ["parts"] = {
@@ -103,7 +104,7 @@ local function make_config()
                 },
                 ["transform"] = {
                   ["req"] = "`reqdata`",
-                  ["res"] = "`body`",
+                  ["res"] = "`body.results`",
                 },
                 ["index$"] = 0,
               },
@@ -147,14 +148,14 @@ local function make_config()
           },
           {
             ["active"] = true,
-            ["name"] = "video_id",
+            ["name"] = "videoId",
             ["req"] = false,
             ["type"] = "`$STRING`",
             ["index$"] = 4,
           },
           {
             ["active"] = true,
-            ["name"] = "view",
+            ["name"] = "views",
             ["req"] = false,
             ["type"] = "`$STRING`",
             ["index$"] = 5,
@@ -181,6 +182,7 @@ local function make_config()
                     },
                   },
                 },
+                ["kind"] = "http",
                 ["method"] = "GET",
                 ["orig"] = "/youtube/search",
                 ["parts"] = {
@@ -194,7 +196,7 @@ local function make_config()
                 },
                 ["transform"] = {
                   ["req"] = "`reqdata`",
-                  ["res"] = "`body`",
+                  ["res"] = "`body.results`",
                 },
                 ["index$"] = 0,
               },

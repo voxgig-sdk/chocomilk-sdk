@@ -24,6 +24,7 @@ require_relative 'prepare_method'
 require_relative 'prepare_params'
 require_relative 'prepare_path'
 require_relative 'prepare_query'
+require_relative 'graphql'
 require_relative 'result_basic'
 require_relative 'result_body'
 require_relative 'result_headers'
@@ -55,6 +56,8 @@ ChocomilkUtility.registrar = ->(u) {
   u.prepare_params = ChocomilkUtilities::PrepareParams
   u.prepare_path = ChocomilkUtilities::PreparePath
   u.prepare_query = ChocomilkUtilities::PrepareQuery
+  u.graphql_body = ChocomilkUtilities::GraphqlBody
+  u.graphql_errors = ChocomilkUtilities::GraphqlErrors
   u.result_basic = ChocomilkUtilities::ResultBasic
   u.result_body = ChocomilkUtilities::ResultBody
   u.result_headers = ChocomilkUtilities::ResultHeaders

@@ -95,6 +95,7 @@ class ChocomilkConfig
                       ],
                     ],
                   ],
+                  'kind' => 'http',
                   'method' => 'GET',
                   'orig' => '/search/pinterest',
                   'parts' => [
@@ -109,7 +110,7 @@ class ChocomilkConfig
                   ],
                   'transform' => [
                     'req' => '`reqdata`',
-                    'res' => '`body`',
+                    'res' => '`body.results`',
                   ],
                   'index$' => 0,
                 ],
@@ -153,14 +154,14 @@ class ChocomilkConfig
             ],
             [
               'active' => true,
-              'name' => 'video_id',
+              'name' => 'videoId',
               'req' => false,
               'type' => '`$STRING`',
               'index$' => 4,
             ],
             [
               'active' => true,
-              'name' => 'view',
+              'name' => 'views',
               'req' => false,
               'type' => '`$STRING`',
               'index$' => 5,
@@ -187,6 +188,7 @@ class ChocomilkConfig
                       ],
                     ],
                   ],
+                  'kind' => 'http',
                   'method' => 'GET',
                   'orig' => '/youtube/search',
                   'parts' => [
@@ -200,7 +202,7 @@ class ChocomilkConfig
                   ],
                   'transform' => [
                     'req' => '`reqdata`',
-                    'res' => '`body`',
+                    'res' => '`body.results`',
                   ],
                   'index$' => 0,
                 ],

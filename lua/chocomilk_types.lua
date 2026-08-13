@@ -27,16 +27,16 @@
 ---@field duration? string
 ---@field thumbnail? string
 ---@field title? string
----@field video_id? string
----@field view? string
+---@field videoId? string
+---@field views? string
 
 ---@class YouTubeListMatch
 ---@field channel? string
 ---@field duration? string
 ---@field thumbnail? string
 ---@field title? string
----@field video_id? string
----@field view? string
+---@field videoId? string
+---@field views? string
 
 local M = {}
 

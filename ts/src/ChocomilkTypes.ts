@@ -21,6 +21,12 @@ export interface SearchListMatch {
   image?: string
   title?: string
   url?: string
+
+  // Selects a custom action instead of the plain list:
+  //   'pinterest'
+  // The remaining keys are that action's own payload.
+  $action?: string
+  [action: string]: any
 }
 
 export interface YouTube {
@@ -28,8 +34,8 @@ export interface YouTube {
   duration?: string
   thumbnail?: string
   title?: string
-  video_id?: string
-  view?: string
+  videoId?: string
+  views?: string
 }
 
 export interface YouTubeListMatch {
@@ -37,7 +43,7 @@ export interface YouTubeListMatch {
   duration?: string
   thumbnail?: string
   title?: string
-  video_id?: string
-  view?: string
+  videoId?: string
+  views?: string
 }
 

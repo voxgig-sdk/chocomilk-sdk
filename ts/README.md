@@ -35,7 +35,9 @@ const client = new ChocomilkSDK()
 
 ### 2. List search records
 
-`list()` resolves to an array of Search objects — iterate it directly:
+`list()` resolves to an array of Search ENTITIES — every operation
+resolves to entities, not raw records. Iterate them directly, and call
+`.data()` on one for the record it holds:
 
 ```ts
 const searchs = await client.Search().list()
@@ -120,7 +122,8 @@ Create a mock client for unit testing — no server required:
 const client = ChocomilkSDK.test()
 
 const search = await client.Search().list()
-// search is a bare entity populated with mock response data
+// search is the entity, populated with mock response data
+// — call search.data() for the record itself
 console.log(search)
 ```
 
@@ -304,8 +307,8 @@ API path: `/search/pinterest`
 | `duration` |  |
 | `thumbnail` |  |
 | `title` |  |
-| `video_id` |  |
-| `view` |  |
+| `videoId` |  |
+| `views` |  |
 
 Operations: list.
 
@@ -362,8 +365,8 @@ Create an instance: `const you_tube = client.YouTube()`
 | `duration` | `string` |  |
 | `thumbnail` | `string` |  |
 | `title` | `string` |  |
-| `video_id` | `string` |  |
-| `view` | `string` |  |
+| `videoId` | `string` |  |
+| `views` | `string` |  |
 
 #### Example: List
 

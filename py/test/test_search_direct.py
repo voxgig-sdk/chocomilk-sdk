@@ -3,9 +3,9 @@
 import json
 import pytest
 
-from utility.voxgig_struct import voxgig_struct as vs
+from chocomilk_sdk.utility.voxgig_struct import voxgig_struct as vs
 from chocomilk_sdk import ChocomilkSDK
-from core import helpers
+from chocomilk_sdk.core import helpers
 from test import runner
 
 

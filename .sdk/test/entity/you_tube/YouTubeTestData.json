@@ -6,24 +6,24 @@
         "duration": "s3d",
         "thumbnail": "s3e",
         "title": "s3f",
-        "video_id": "VIDEO01",
-        "view": "s41"
+        "videoId": "s40",
+        "views": "s41"
       },
       "YOU_TUBE01": {
         "channel": "s78",
         "duration": "s79",
         "thumbnail": "s7a",
         "title": "s7b",
-        "video_id": "VIDEO01",
-        "view": "s7d"
+        "videoId": "s7c",
+        "views": "s7d"
       },
       "YOU_TUBE02": {
         "channel": "sb4",
         "duration": "sb5",
         "thumbnail": "sb6",
         "title": "sb7",
-        "video_id": "VIDEO01",
-        "view": "sb9"
+        "videoId": "sb8",
+        "views": "sb9"
       }
     }
   },
@@ -34,8 +34,8 @@
         "duration": "sf1",
         "thumbnail": "sf2",
         "title": "sf3",
-        "video_id": "VIDEO01",
-        "view": "sf5"
+        "videoId": "sf4",
+        "views": "sf5"
       }
     }
   }

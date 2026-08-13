@@ -153,8 +153,8 @@ you_tube = client.YouTube()
 | `duration` | `str` | No |  |
 | `thumbnail` | `str` | No |  |
 | `title` | `str` | No |  |
-| `video_id` | `str` | No |  |
-| `view` | `str` | No |  |
+| `videoId` | `str` | No |  |
+| `views` | `str` | No |  |
 
 ### Operations
 

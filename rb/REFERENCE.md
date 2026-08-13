@@ -158,8 +158,8 @@ you_tube = client.YouTube
 | `duration` | `String` | No |  |
 | `thumbnail` | `String` | No |  |
 | `title` | `String` | No |  |
-| `video_id` | `String` | No |  |
-| `view` | `String` | No |  |
+| `videoId` | `String` | No |  |
+| `views` | `String` | No |  |
 
 ### Operations
 

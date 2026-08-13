@@ -14,12 +14,12 @@ from __future__ import annotations
 
 from urllib.parse import quote
 
-from config import make_config
-from features import _make_feature
-from core.control import ChocomilkControl
-from core.error import ChocomilkError
-from core.result import ChocomilkResult
-from core.spec import ChocomilkSpec
+from chocomilk_sdk.config import make_config
+from chocomilk_sdk.features import _make_feature
+from chocomilk_sdk.core.control import ChocomilkControl
+from chocomilk_sdk.core.error import ChocomilkError
+from chocomilk_sdk.core.result import ChocomilkResult
+from chocomilk_sdk.core.spec import ChocomilkSpec
 
 
 # True when this SDK was generated with the named feature.

@@ -1,4 +1,4 @@
-# ProjectName SDK exists test
+# Chocomilk SDK exists test
 
 import pytest
 from chocomilk_sdk import ChocomilkSDK

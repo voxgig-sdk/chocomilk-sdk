@@ -80,18 +80,18 @@ SearchListMatch = Struct.new(
 # @!attribute [rw] title
 #   @return [String, nil]
 #
-# @!attribute [rw] video_id
+# @!attribute [rw] videoId
 #   @return [String, nil]
 #
-# @!attribute [rw] view
+# @!attribute [rw] views
 #   @return [String, nil]
 YouTube = Struct.new(
   :channel,
   :duration,
   :thumbnail,
   :title,
-  :video_id,
-  :view,
+  :videoId,
+  :views,
   keyword_init: true
 )
 
@@ -109,18 +109,18 @@ YouTube = Struct.new(
 # @!attribute [rw] title
 #   @return [String, nil]
 #
-# @!attribute [rw] video_id
+# @!attribute [rw] videoId
 #   @return [String, nil]
 #
-# @!attribute [rw] view
+# @!attribute [rw] views
 #   @return [String, nil]
 YouTubeListMatch = Struct.new(
   :channel,
   :duration,
   :thumbnail,
   :title,
-  :video_id,
-  :view,
+  :videoId,
+  :views,
   keyword_init: true
 )
 

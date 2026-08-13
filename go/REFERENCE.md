@@ -162,8 +162,8 @@ fmt.Println(youTube.GetName()) // "you_tube"
 | `duration` | `string` | No |  |
 | `thumbnail` | `string` | No |  |
 | `title` | `string` | No |  |
-| `video_id` | `string` | No |  |
-| `view` | `string` | No |  |
+| `videoId` | `string` | No |  |
+| `views` | `string` | No |  |
 
 ### Operations
 
