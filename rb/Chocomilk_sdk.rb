@@ -28,7 +28,7 @@ class ChocomilkSDK
     utility = ChocomilkUtility.new
     @_utility = utility
 
-    config = ChocomilkConfig.make_config
+    config = ChocomilkConfig.shared_config
 
     @_rootctx = utility.make_context.call({
       "client" => self,

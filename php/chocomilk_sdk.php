@@ -40,7 +40,7 @@ class ChocomilkSDK
         $utility = new ChocomilkUtility();
         $this->_utility = $utility;
 
-        $config = ChocomilkConfig::make_config();
+        $config = ChocomilkConfig::shared_config();
 
         $this->_rootctx = ($utility->make_context)([
             "client" => $this,

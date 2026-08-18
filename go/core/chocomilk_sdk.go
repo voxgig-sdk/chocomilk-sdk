@@ -23,7 +23,7 @@ func NewChocomilkSDK(options map[string]any) *ChocomilkSDK {
 
 	sdk.utility = NewUtility()
 
-	config := MakeConfig()
+	config := SharedConfig()
 
 	sdk.rootctx = sdk.utility.MakeContext(map[string]any{
 		"client":  sdk,
