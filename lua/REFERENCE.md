@@ -94,12 +94,12 @@ local search = client:Search(nil)
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `author` | `string` | No |  |
-| `description` | `string` | No |  |
-| `id` | `string` | No |  |
-| `image` | `string` | No |  |
-| `title` | `string` | No |  |
-| `url` | `string` | No |  |
+| `author` | `string` | No | Pin author/creator |
+| `description` | `string` | No | Pin description |
+| `id` | `string` | No | Pinterest pin ID |
+| `image` | `string` | No | Pin image URL |
+| `title` | `string` | No | Pin title |
+| `url` | `string` | No | Pinterest pin URL |
 
 ### Operations
 
@@ -151,12 +151,12 @@ local you_tube = client:YouTube(nil)
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `channel` | `string` | No |  |
-| `duration` | `string` | No |  |
-| `thumbnail` | `string` | No |  |
-| `title` | `string` | No |  |
-| `videoId` | `string` | No |  |
-| `views` | `string` | No |  |
+| `channel` | `string` | No | Channel name |
+| `duration` | `string` | No | Video duration |
+| `thumbnail` | `string` | No | Video thumbnail URL |
+| `title` | `string` | No | Video title |
+| `videoId` | `string` | No | YouTube video ID |
+| `views` | `string` | No | View count |
 
 ### Operations
 

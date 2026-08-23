@@ -19,6 +19,9 @@ module ChocomilkConfig
     {
       "main" => {
         "name" => "Chocomilk",
+        "slug" => "chocomilk",
+        "version" => "0.0.1",
+        "target" => "rb",
       },
       "feature" => {
         "test" => {
@@ -42,26 +45,32 @@ module ChocomilkConfig
           "fields" => [
             {
               "name" => "author",
+              "short" => "Pin author/creator",
               "type" => "`$STRING`",
             },
             {
               "name" => "description",
+              "short" => "Pin description",
               "type" => "`$STRING`",
             },
             {
               "name" => "id",
+              "short" => "Pinterest pin ID",
               "type" => "`$STRING`",
             },
             {
               "name" => "image",
+              "short" => "Pin image URL",
               "type" => "`$STRING`",
             },
             {
               "name" => "title",
+              "short" => "Pin title",
               "type" => "`$STRING`",
             },
             {
               "name" => "url",
+              "short" => "Pinterest pin URL",
               "type" => "`$STRING`",
             },
           ],
@@ -113,26 +122,32 @@ module ChocomilkConfig
           "fields" => [
             {
               "name" => "channel",
+              "short" => "Channel name",
               "type" => "`$STRING`",
             },
             {
               "name" => "duration",
+              "short" => "Video duration",
               "type" => "`$STRING`",
             },
             {
               "name" => "thumbnail",
+              "short" => "Video thumbnail URL",
               "type" => "`$STRING`",
             },
             {
               "name" => "title",
+              "short" => "Video title",
               "type" => "`$STRING`",
             },
             {
               "name" => "videoId",
+              "short" => "YouTube video ID",
               "type" => "`$STRING`",
             },
             {
               "name" => "views",
+              "short" => "View count",
               "type" => "`$STRING`",
             },
           ],

@@ -91,12 +91,12 @@ search = client.Search()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `author` | `str` | No |  |
-| `description` | `str` | No |  |
-| `id` | `str` | No |  |
-| `image` | `str` | No |  |
-| `title` | `str` | No |  |
-| `url` | `str` | No |  |
+| `author` | `str` | No | Pin author/creator |
+| `description` | `str` | No | Pin description |
+| `id` | `str` | No | Pinterest pin ID |
+| `image` | `str` | No | Pin image URL |
+| `title` | `str` | No | Pin title |
+| `url` | `str` | No | Pinterest pin URL |
 
 ### Operations
 
@@ -149,12 +149,12 @@ you_tube = client.YouTube()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `channel` | `str` | No |  |
-| `duration` | `str` | No |  |
-| `thumbnail` | `str` | No |  |
-| `title` | `str` | No |  |
-| `videoId` | `str` | No |  |
-| `views` | `str` | No |  |
+| `channel` | `str` | No | Channel name |
+| `duration` | `str` | No | Video duration |
+| `thumbnail` | `str` | No | Video thumbnail URL |
+| `title` | `str` | No | Video title |
+| `videoId` | `str` | No | YouTube video ID |
+| `views` | `str` | No | View count |
 
 ### Operations
 

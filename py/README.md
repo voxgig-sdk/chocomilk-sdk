@@ -244,12 +244,12 @@ On error, `ok` is `False` and `err` contains the error value.
 
 | Field | Description |
 | --- | --- |
-| `author` |  |
-| `description` |  |
-| `id` |  |
-| `image` |  |
-| `title` |  |
-| `url` |  |
+| `author` | Pin author/creator |
+| `description` | Pin description |
+| `id` | Pinterest pin ID |
+| `image` | Pin image URL |
+| `title` | Pin title |
+| `url` | Pinterest pin URL |
 
 Operations: List.
 
@@ -259,12 +259,12 @@ API path: `/search/pinterest`
 
 | Field | Description |
 | --- | --- |
-| `channel` |  |
-| `duration` |  |
-| `thumbnail` |  |
-| `title` |  |
-| `videoId` |  |
-| `views` |  |
+| `channel` | Channel name |
+| `duration` | Video duration |
+| `thumbnail` | Video thumbnail URL |
+| `title` | Video title |
+| `videoId` | YouTube video ID |
+| `views` | View count |
 
 Operations: List.
 
@@ -289,12 +289,12 @@ Create an instance: `search = client.Search()`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `author` | `str` |  |
-| `description` | `str` |  |
-| `id` | `str` |  |
-| `image` | `str` |  |
-| `title` | `str` |  |
-| `url` | `str` |  |
+| `author` | `str` | Pin author/creator |
+| `description` | `str` | Pin description |
+| `id` | `str` | Pinterest pin ID |
+| `image` | `str` | Pin image URL |
+| `title` | `str` | Pin title |
+| `url` | `str` | Pinterest pin URL |
 
 #### Example: List
 
@@ -317,12 +317,12 @@ Create an instance: `you_tube = client.YouTube()`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `channel` | `str` |  |
-| `duration` | `str` |  |
-| `thumbnail` | `str` |  |
-| `title` | `str` |  |
-| `videoId` | `str` |  |
-| `views` | `str` |  |
+| `channel` | `str` | Channel name |
+| `duration` | `str` | Video duration |
+| `thumbnail` | `str` | Video thumbnail URL |
+| `title` | `str` | Video title |
+| `videoId` | `str` | YouTube video ID |
+| `views` | `str` | View count |
 
 #### Example: List
 

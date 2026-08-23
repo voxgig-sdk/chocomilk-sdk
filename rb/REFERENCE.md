@@ -97,12 +97,12 @@ search = client.Search
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `author` | `String` | No |  |
-| `description` | `String` | No |  |
-| `id` | `String` | No |  |
-| `image` | `String` | No |  |
-| `title` | `String` | No |  |
-| `url` | `String` | No |  |
+| `author` | `String` | No | Pin author/creator |
+| `description` | `String` | No | Pin description |
+| `id` | `String` | No | Pinterest pin ID |
+| `image` | `String` | No | Pin image URL |
+| `title` | `String` | No | Pin title |
+| `url` | `String` | No | Pinterest pin URL |
 
 ### Operations
 
@@ -154,12 +154,12 @@ you_tube = client.YouTube
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `channel` | `String` | No |  |
-| `duration` | `String` | No |  |
-| `thumbnail` | `String` | No |  |
-| `title` | `String` | No |  |
-| `videoId` | `String` | No |  |
-| `views` | `String` | No |  |
+| `channel` | `String` | No | Channel name |
+| `duration` | `String` | No | Video duration |
+| `thumbnail` | `String` | No | Video thumbnail URL |
+| `title` | `String` | No | Video title |
+| `videoId` | `String` | No | YouTube video ID |
+| `views` | `String` | No | View count |
 
 ### Operations
 

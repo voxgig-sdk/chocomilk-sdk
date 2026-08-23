@@ -36,36 +36,42 @@
               "active": true,
               "name": "author",
               "req": false,
+              "short": "Pin author/creator",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "description",
               "req": false,
+              "short": "Pin description",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "id",
               "req": false,
+              "short": "Pinterest pin ID",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "image",
               "req": false,
+              "short": "Pin image URL",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "title",
               "req": false,
+              "short": "Pin title",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "url",
               "req": false,
+              "short": "Pinterest pin URL",
               "type": "`$STRING`"
             }
           ],
@@ -129,36 +135,42 @@
               "active": true,
               "name": "channel",
               "req": false,
+              "short": "Channel name",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "duration",
               "req": false,
+              "short": "Video duration",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "thumbnail",
               "req": false,
+              "short": "Video thumbnail URL",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "title",
               "req": false,
+              "short": "Video title",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "videoId",
               "req": false,
+              "short": "YouTube video ID",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "views",
               "req": false,
+              "short": "View count",
               "type": "`$STRING`"
             }
           ],

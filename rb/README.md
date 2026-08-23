@@ -238,12 +238,12 @@ returns a result `Hash` with these keys:
 
 | Field | Description |
 | --- | --- |
-| `author` |  |
-| `description` |  |
-| `id` |  |
-| `image` |  |
-| `title` |  |
-| `url` |  |
+| `author` | Pin author/creator |
+| `description` | Pin description |
+| `id` | Pinterest pin ID |
+| `image` | Pin image URL |
+| `title` | Pin title |
+| `url` | Pinterest pin URL |
 
 Operations: List.
 
@@ -253,12 +253,12 @@ API path: `/search/pinterest`
 
 | Field | Description |
 | --- | --- |
-| `channel` |  |
-| `duration` |  |
-| `thumbnail` |  |
-| `title` |  |
-| `videoId` |  |
-| `views` |  |
+| `channel` | Channel name |
+| `duration` | Video duration |
+| `thumbnail` | Video thumbnail URL |
+| `title` | Video title |
+| `videoId` | YouTube video ID |
+| `views` | View count |
 
 Operations: List.
 
@@ -283,12 +283,12 @@ Create an instance: `search = client.Search`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `author` | `String` |  |
-| `description` | `String` |  |
-| `id` | `String` |  |
-| `image` | `String` |  |
-| `title` | `String` |  |
-| `url` | `String` |  |
+| `author` | `String` | Pin author/creator |
+| `description` | `String` | Pin description |
+| `id` | `String` | Pinterest pin ID |
+| `image` | `String` | Pin image URL |
+| `title` | `String` | Pin title |
+| `url` | `String` | Pinterest pin URL |
 
 #### Example: List
 
@@ -312,12 +312,12 @@ Create an instance: `you_tube = client.YouTube`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `channel` | `String` |  |
-| `duration` | `String` |  |
-| `thumbnail` | `String` |  |
-| `title` | `String` |  |
-| `videoId` | `String` |  |
-| `views` | `String` |  |
+| `channel` | `String` | Channel name |
+| `duration` | `String` | Video duration |
+| `thumbnail` | `String` | Video thumbnail URL |
+| `title` | `String` | Video title |
+| `videoId` | `String` | YouTube video ID |
+| `views` | `String` | View count |
 
 #### Example: List
 

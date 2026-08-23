@@ -8,31 +8,37 @@ main: kit: entity: search: {
     {
       name: "author"
       req: false
+      short: "Pin author/creator"
       type: "`$STRING`"
     }
     {
       name: "description"
       req: false
+      short: "Pin description"
       type: "`$STRING`"
     }
     {
       name: "id"
       req: false
+      short: "Pinterest pin ID"
       type: "`$STRING`"
     }
     {
       name: "image"
       req: false
+      short: "Pin image URL"
       type: "`$STRING`"
     }
     {
       name: "title"
       req: false
+      short: "Pin title"
       type: "`$STRING`"
     }
     {
       name: "url"
       req: false
+      short: "Pinterest pin URL"
       type: "`$STRING`"
     }
   ]

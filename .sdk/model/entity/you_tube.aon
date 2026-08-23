@@ -8,31 +8,37 @@ main: kit: entity: you_tube: {
     {
       name: "channel"
       req: false
+      short: "Channel name"
       type: "`$STRING`"
     }
     {
       name: "duration"
       req: false
+      short: "Video duration"
       type: "`$STRING`"
     }
     {
       name: "thumbnail"
       req: false
+      short: "Video thumbnail URL"
       type: "`$STRING`"
     }
     {
       name: "title"
       req: false
+      short: "Video title"
       type: "`$STRING`"
     }
     {
       name: "videoId"
       req: false
+      short: "YouTube video ID"
       type: "`$STRING`"
     }
     {
       name: "views"
       req: false
+      short: "View count"
       type: "`$STRING`"
     }
   ]

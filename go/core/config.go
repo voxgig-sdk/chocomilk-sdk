@@ -11,6 +11,9 @@ func MakeConfig() map[string]any {
 	return map[string]any{
 		"main": map[string]any{
 			"name": "Chocomilk",
+			"slug": "chocomilk",
+			"version": "0.0.1",
+			"target": "go",
 		},
 		"feature": map[string]any{
 			"test": map[string]any{
@@ -34,26 +37,32 @@ func MakeConfig() map[string]any {
 				"fields": []any{
 					map[string]any{
 						"name": "author",
+						"short": "Pin author/creator",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "description",
+						"short": "Pin description",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "id",
+						"short": "Pinterest pin ID",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "image",
+						"short": "Pin image URL",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "title",
+						"short": "Pin title",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "url",
+						"short": "Pinterest pin URL",
 						"type": "`$STRING`",
 					},
 				},
@@ -105,26 +114,32 @@ func MakeConfig() map[string]any {
 				"fields": []any{
 					map[string]any{
 						"name": "channel",
+						"short": "Channel name",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "duration",
+						"short": "Video duration",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "thumbnail",
+						"short": "Video thumbnail URL",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "title",
+						"short": "Video title",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "videoId",
+						"short": "YouTube video ID",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "views",
+						"short": "View count",
 						"type": "`$STRING`",
 					},
 				},

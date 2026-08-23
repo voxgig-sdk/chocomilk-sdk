@@ -248,12 +248,12 @@ On error, `ok` is `false` and `$err` contains the error value.
 
 | Field | Description |
 | --- | --- |
-| `author` |  |
-| `description` |  |
-| `id` |  |
-| `image` |  |
-| `title` |  |
-| `url` |  |
+| `author` | Pin author/creator |
+| `description` | Pin description |
+| `id` | Pinterest pin ID |
+| `image` | Pin image URL |
+| `title` | Pin title |
+| `url` | Pinterest pin URL |
 
 Operations: List.
 
@@ -263,12 +263,12 @@ API path: `/search/pinterest`
 
 | Field | Description |
 | --- | --- |
-| `channel` |  |
-| `duration` |  |
-| `thumbnail` |  |
-| `title` |  |
-| `videoId` |  |
-| `views` |  |
+| `channel` | Channel name |
+| `duration` | Video duration |
+| `thumbnail` | Video thumbnail URL |
+| `title` | Video title |
+| `videoId` | YouTube video ID |
+| `views` | View count |
 
 Operations: List.
 
@@ -293,12 +293,12 @@ Create an instance: `$search = $client->Search();`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `author` | `string` |  |
-| `description` | `string` |  |
-| `id` | `string` |  |
-| `image` | `string` |  |
-| `title` | `string` |  |
-| `url` | `string` |  |
+| `author` | `string` | Pin author/creator |
+| `description` | `string` | Pin description |
+| `id` | `string` | Pinterest pin ID |
+| `image` | `string` | Pin image URL |
+| `title` | `string` | Pin title |
+| `url` | `string` | Pinterest pin URL |
 
 #### Example: List
 
@@ -322,12 +322,12 @@ Create an instance: `$you_tube = $client->YouTube();`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `channel` | `string` |  |
-| `duration` | `string` |  |
-| `thumbnail` | `string` |  |
-| `title` | `string` |  |
-| `videoId` | `string` |  |
-| `views` | `string` |  |
+| `channel` | `string` | Channel name |
+| `duration` | `string` | Video duration |
+| `thumbnail` | `string` | Video thumbnail URL |
+| `title` | `string` | Video title |
+| `videoId` | `string` | YouTube video ID |
+| `views` | `string` | View count |
 
 #### Example: List
 
