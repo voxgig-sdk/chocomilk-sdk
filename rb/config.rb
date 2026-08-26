@@ -28,6 +28,7 @@ module ChocomilkConfig
           "options" => {
             "active" => false,
           },
+          "transport" => "base",
         },
       },
       "options" => {
