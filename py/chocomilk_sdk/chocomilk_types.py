@@ -25,13 +25,8 @@ class Search(TypedDict, total=False):
     url: str
 
 
-class SearchListMatch(TypedDict, total=False):
-    author: str
-    description: str
-    id: str
-    image: str
-    title: str
-    url: str
+class SearchListMatch(TypedDict):
+    query: str
 
 
 class YouTube(TypedDict, total=False):
@@ -43,10 +38,5 @@ class YouTube(TypedDict, total=False):
     views: str
 
 
-class YouTubeListMatch(TypedDict, total=False):
-    channel: str
-    duration: str
-    thumbnail: str
-    title: str
-    videoId: str
-    views: str
+class YouTubeListMatch(TypedDict):
+    query: str

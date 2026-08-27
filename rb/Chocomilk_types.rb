@@ -39,30 +39,10 @@ Search = Struct.new(
 
 # Request payload for Search#list.
 #
-# @!attribute [rw] author
-#   @return [String, nil]
-#
-# @!attribute [rw] description
-#   @return [String, nil]
-#
-# @!attribute [rw] id
-#   @return [String, nil]
-#
-# @!attribute [rw] image
-#   @return [String, nil]
-#
-# @!attribute [rw] title
-#   @return [String, nil]
-#
-# @!attribute [rw] url
-#   @return [String, nil]
+# @!attribute [rw] query
+#   @return [String]
 SearchListMatch = Struct.new(
-  :author,
-  :description,
-  :id,
-  :image,
-  :title,
-  :url,
+  :query,
   keyword_init: true
 )
 
@@ -97,30 +77,10 @@ YouTube = Struct.new(
 
 # Request payload for YouTube#list.
 #
-# @!attribute [rw] channel
-#   @return [String, nil]
-#
-# @!attribute [rw] duration
-#   @return [String, nil]
-#
-# @!attribute [rw] thumbnail
-#   @return [String, nil]
-#
-# @!attribute [rw] title
-#   @return [String, nil]
-#
-# @!attribute [rw] videoId
-#   @return [String, nil]
-#
-# @!attribute [rw] views
-#   @return [String, nil]
+# @!attribute [rw] query
+#   @return [String]
 YouTubeListMatch = Struct.new(
-  :channel,
-  :duration,
-  :thumbnail,
-  :title,
-  :videoId,
-  :views,
+  :query,
   keyword_init: true
 )
 

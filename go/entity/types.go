@@ -24,12 +24,7 @@ type Search struct {
 
 // SearchListMatch is the typed request payload for Search.ListTyped.
 type SearchListMatch struct {
-	Author *string `json:"author,omitempty"`
-	Description *string `json:"description,omitempty"`
-	Id *string `json:"id,omitempty"`
-	Image *string `json:"image,omitempty"`
-	Title *string `json:"title,omitempty"`
-	Url *string `json:"url,omitempty"`
+	Query string `json:"query"`
 }
 
 // YouTube is the typed data model for the you_tube entity.
@@ -44,12 +39,7 @@ type YouTube struct {
 
 // YouTubeListMatch is the typed request payload for YouTube.ListTyped.
 type YouTubeListMatch struct {
-	Channel *string `json:"channel,omitempty"`
-	Duration *string `json:"duration,omitempty"`
-	Thumbnail *string `json:"thumbnail,omitempty"`
-	Title *string `json:"title,omitempty"`
-	VideoId *string `json:"videoId,omitempty"`
-	Views *string `json:"views,omitempty"`
+	Query string `json:"query"`
 }
 
 // asMap turns a typed request/data struct into the map[string]any the

@@ -15,12 +15,7 @@ export interface Search {
 }
 
 export interface SearchListMatch {
-  author?: string
-  description?: string
-  id?: string
-  image?: string
-  title?: string
-  url?: string
+  query: string
 
   // Selects a custom action instead of the plain list:
   //   'pinterest'
@@ -39,11 +34,6 @@ export interface YouTube {
 }
 
 export interface YouTubeListMatch {
-  channel?: string
-  duration?: string
-  thumbnail?: string
-  title?: string
-  videoId?: string
-  views?: string
+  query: string
 }
 

@@ -26,12 +26,7 @@ class Search
 /** Request payload for Search#list. */
 class SearchListMatch
 {
-    public ?string $author = null;
-    public ?string $description = null;
-    public ?string $id = null;
-    public ?string $image = null;
-    public ?string $title = null;
-    public ?string $url = null;
+    public string $query;
 }
 
 /** YouTube entity data model. */
@@ -48,11 +43,6 @@ class YouTube
 /** Request payload for YouTube#list. */
 class YouTubeListMatch
 {
-    public ?string $channel = null;
-    public ?string $duration = null;
-    public ?string $thumbnail = null;
-    public ?string $title = null;
-    public ?string $videoId = null;
-    public ?string $views = null;
+    public string $query;
 }
 

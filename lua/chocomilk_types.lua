@@ -15,12 +15,7 @@
 ---@field url? string
 
 ---@class SearchListMatch
----@field author? string
----@field description? string
----@field id? string
----@field image? string
----@field title? string
----@field url? string
+---@field query string
 
 ---@class YouTube
 ---@field channel? string
@@ -31,12 +26,7 @@
 ---@field views? string
 
 ---@class YouTubeListMatch
----@field channel? string
----@field duration? string
----@field thumbnail? string
----@field title? string
----@field videoId? string
----@field views? string
+---@field query string
 
 local M = {}
 
