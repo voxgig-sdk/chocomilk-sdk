@@ -68,9 +68,13 @@ main: kit: entity: search: {
           }
           method: "GET"
           orig: "/search/pinterest"
-          parts: [
-            "search"
-            "pinterest"
+          segments: [
+            {
+              lit: "search"
+            }
+            {
+              lit: "pinterest"
+            }
           ]
           select: {
             "$action": "pinterest"

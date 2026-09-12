@@ -63,6 +63,10 @@ local function make_config()
             ["type"] = "`$STRING`",
           },
         },
+        ["id"] = {
+          ["field"] = "id",
+          ["name"] = "id",
+        },
         ["name"] = "search",
         ["op"] = {
           ["list"] = {
@@ -85,9 +89,13 @@ local function make_config()
                 ["kind"] = "http",
                 ["method"] = "GET",
                 ["orig"] = "/search/pinterest",
-                ["parts"] = {
-                  "search",
-                  "pinterest",
+                ["segments"] = {
+                  {
+                    ["lit"] = "search",
+                  },
+                  {
+                    ["lit"] = "pinterest",
+                  },
                 },
                 ["select"] = {
                   ["$action"] = "pinterest",
@@ -98,6 +106,10 @@ local function make_config()
                 ["transform"] = {
                   ["req"] = "`reqdata`",
                   ["res"] = "`body.results`",
+                },
+                ["parts"] = {
+                  "search",
+                  "pinterest",
                 },
               },
             },
@@ -162,9 +174,13 @@ local function make_config()
                 ["kind"] = "http",
                 ["method"] = "GET",
                 ["orig"] = "/youtube/search",
-                ["parts"] = {
-                  "youtube",
-                  "search",
+                ["segments"] = {
+                  {
+                    ["lit"] = "youtube",
+                  },
+                  {
+                    ["lit"] = "search",
+                  },
                 },
                 ["select"] = {
                   ["exist"] = {
@@ -174,6 +190,10 @@ local function make_config()
                 ["transform"] = {
                   ["req"] = "`reqdata`",
                   ["res"] = "`body.results`",
+                },
+                ["parts"] = {
+                  "youtube",
+                  "search",
                 },
               },
             },

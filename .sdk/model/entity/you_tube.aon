@@ -63,9 +63,13 @@ main: kit: entity: you_tube: {
           }
           method: "GET"
           orig: "/youtube/search"
-          parts: [
-            "youtube"
-            "search"
+          segments: [
+            {
+              lit: "youtube"
+            }
+            {
+              lit: "search"
+            }
           ]
           select: {
             exist: [

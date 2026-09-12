@@ -89,6 +89,10 @@ class ChocomilkConfig
               'type' => '`$STRING`',
             ],
           ],
+          'id' => [
+            'field' => 'id',
+            'name' => 'id',
+          ],
           'name' => 'search',
           'op' => [
             'list' => [
@@ -111,9 +115,13 @@ class ChocomilkConfig
                   'kind' => 'http',
                   'method' => 'GET',
                   'orig' => '/search/pinterest',
-                  'parts' => [
-                    'search',
-                    'pinterest',
+                  'segments' => [
+                    [
+                      'lit' => 'search',
+                    ],
+                    [
+                      'lit' => 'pinterest',
+                    ],
                   ],
                   'select' => [
                     '$action' => 'pinterest',
@@ -124,6 +132,10 @@ class ChocomilkConfig
                   'transform' => [
                     'req' => '`reqdata`',
                     'res' => '`body.results`',
+                  ],
+                  'parts' => [
+                    'search',
+                    'pinterest',
                   ],
                 ],
               ],
@@ -188,9 +200,13 @@ class ChocomilkConfig
                   'kind' => 'http',
                   'method' => 'GET',
                   'orig' => '/youtube/search',
-                  'parts' => [
-                    'youtube',
-                    'search',
+                  'segments' => [
+                    [
+                      'lit' => 'youtube',
+                    ],
+                    [
+                      'lit' => 'search',
+                    ],
                   ],
                   'select' => [
                     'exist' => [
@@ -200,6 +216,10 @@ class ChocomilkConfig
                   'transform' => [
                     'req' => '`reqdata`',
                     'res' => '`body.results`',
+                  ],
+                  'parts' => [
+                    'youtube',
+                    'search',
                   ],
                 ],
               ],

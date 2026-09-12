@@ -75,6 +75,10 @@ module ChocomilkConfig
               "type" => "`$STRING`",
             },
           ],
+          "id" => {
+            "field" => "id",
+            "name" => "id",
+          },
           "name" => "search",
           "op" => {
             "list" => {
@@ -97,9 +101,13 @@ module ChocomilkConfig
                   "kind" => "http",
                   "method" => "GET",
                   "orig" => "/search/pinterest",
-                  "parts" => [
-                    "search",
-                    "pinterest",
+                  "segments" => [
+                    {
+                      "lit" => "search",
+                    },
+                    {
+                      "lit" => "pinterest",
+                    },
                   ],
                   "select" => {
                     "$action" => "pinterest",
@@ -111,6 +119,10 @@ module ChocomilkConfig
                     "req" => "`reqdata`",
                     "res" => "`body.results`",
                   },
+                  "parts" => [
+                    "search",
+                    "pinterest",
+                  ],
                 },
               ],
             },
@@ -174,9 +186,13 @@ module ChocomilkConfig
                   "kind" => "http",
                   "method" => "GET",
                   "orig" => "/youtube/search",
-                  "parts" => [
-                    "youtube",
-                    "search",
+                  "segments" => [
+                    {
+                      "lit" => "youtube",
+                    },
+                    {
+                      "lit" => "search",
+                    },
                   ],
                   "select" => {
                     "exist" => [
@@ -187,6 +203,10 @@ module ChocomilkConfig
                     "req" => "`reqdata`",
                     "res" => "`body.results`",
                   },
+                  "parts" => [
+                    "youtube",
+                    "search",
+                  ],
                 },
               ],
             },
