@@ -105,7 +105,7 @@ local results, err = client:Search():list()
 
 | Language | Package | Install |
 | --- | --- | --- |
-| TypeScript | `@voxgig-sdk/chocomilk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/chocomilk-sdk/releases) |
+| TypeScript | `@voxgig-sdk/chocomilk-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/chocomilk-sdk/releases) |
 | Python | `voxgig-sdk-chocomilk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/chocomilk-sdk/releases) |
 | PHP | `voxgig-sdk/chocomilk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/chocomilk-sdk/releases) |
 | Golang | `github.com/voxgig-sdk/chocomilk-sdk/go` | `go get github.com/voxgig-sdk/chocomilk-sdk/go@latest` |
@@ -119,7 +119,7 @@ local results, err = client:Search():list()
 ### TypeScript
 
 ```ts
-import { ChocomilkSDK } from '@voxgig-sdk/chocomilk'
+import { ChocomilkSDK } from '@voxgig-sdk/chocomilk-sdk'
 
 const client = new ChocomilkSDK()
 

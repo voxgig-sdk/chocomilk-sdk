@@ -28,7 +28,7 @@ loading a specific record.
 ### 1. Create a client
 
 ```ts
-import { ChocomilkSDK } from '@voxgig-sdk/chocomilk'
+import { ChocomilkSDK } from '@voxgig-sdk/chocomilk-sdk'
 
 const client = new ChocomilkSDK()
 ```
@@ -457,7 +457,7 @@ chocomilk/
 Import the SDK from the package root:
 
 ```ts
-import { ChocomilkSDK } from '@voxgig-sdk/chocomilk'
+import { ChocomilkSDK } from '@voxgig-sdk/chocomilk-sdk'
 ```
 
 ### Entity state
