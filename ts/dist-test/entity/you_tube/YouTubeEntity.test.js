@@ -40,6 +40,8 @@ const node_path_1 = __importDefault(require("node:path"));
 const Fs = __importStar(require("node:fs"));
 const node_test_1 = require("node:test");
 const node_assert_1 = __importDefault(require("node:assert"));
+const live_runner_1 = require("../../live-runner");
+const live_entity_1 = require("../../live-entity");
 const __1 = require("../../..");
 const utility_1 = require("../../utility");
 // AFTER the imports on purpose: TypeScript hoists `import` above any
@@ -59,16 +61,12 @@ const utility_1 = require("../../utility");
     (0, node_test_1.test)('basic', async (t) => {
         const live = 'TRUE' === process.env.CHOCOMILK_TEST_LIVE;
         for (const op of ['list']) {
-            if ((0, utility_1.maybeSkipControl)(t, 'entityOp', 'you_tube.' + op, live))
+            if (!live && (0, utility_1.maybeSkipControl)(t, 'entityOp', 'you_tube.' + op, live))
                 return;
         }
         const setup = basicSetup();
-        // The basic flow consumes synthetic IDs and field values from the
-        // fixture (entity TestData.json). Those don't exist on the live API.
-        // Skip live runs unless the user provided a real ENTID env override.
-        if (setup.syntheticOnly) {
-            t.skip('live entity test uses synthetic IDs from fixture — set CHOCOMILK_TEST_YOU_TUBE_ENTID JSON to run live');
-            return;
+        if (setup.live) {
+            return (0, live_entity_1.runLiveEntity)(setup, { "active": true, "alias": { "field": {} }, "fields": [{ "active": true, "name": "channel", "req": false, "short": "Channel name", "type": "`$STRING`", "index$": 0 }, { "active": true, "name": "duration", "req": false, "short": "Video duration", "type": "`$STRING`", "index$": 1 }, { "active": true, "name": "thumbnail", "req": false, "short": "Video thumbnail URL", "type": "`$STRING`", "index$": 2 }, { "active": true, "name": "title", "req": false, "short": "Video title", "type": "`$STRING`", "index$": 3 }, { "active": true, "name": "videoId", "req": false, "short": "YouTube video ID", "type": "`$STRING`", "index$": 4 }, { "active": true, "name": "views", "req": false, "short": "View count", "type": "`$STRING`", "index$": 5 }], "name": "you_tube", "op": { "list": { "input": "data", "name": "list", "points": [{ "active": true, "args": { "query": [{ "active": true, "example": "mrbeast", "kind": "query", "name": "query", "orig": "query", "reqd": true, "type": "`$STRING`", "index$": 0 }] }, "contract": { "id": "GET /youtube/search", "json": "{\"operationId\":\"searchYouTube\",\"parameters\":[{\"description\":\"Search query for YouTube videos\",\"example\":\"mrbeast\",\"in\":\"query\",\"name\":\"query\",\"required\":true,\"schema\":{\"type\":\"string\"}}],\"protocol\":\"http\",\"responses\":{\"200\":{\"content\":{\"application/json\":{\"schema\":{\"properties\":{\"results\":{\"items\":{\"properties\":{\"channel\":{\"description\":\"Channel name\",\"type\":\"string\"},\"duration\":{\"description\":\"Video duration\",\"type\":\"string\"},\"thumbnail\":{\"description\":\"Video thumbnail URL\",\"type\":\"string\"},\"title\":{\"description\":\"Video title\",\"type\":\"string\"},\"videoId\":{\"description\":\"YouTube video ID\",\"type\":\"string\"},\"views\":{\"description\":\"View count\",\"type\":\"string\"}},\"type\":\"object\"},\"type\":\"array\"},\"status\":{\"description\":\"Response status\",\"type\":\"string\"}},\"type\":\"object\"}}},\"description\":\"Successful response with YouTube search results\"},\"400\":{\"content\":{\"application/json\":{\"schema\":{\"properties\":{\"code\":{\"description\":\"Error code\",\"example\":400,\"type\":\"integer\"},\"message\":{\"description\":\"Error message\",\"example\":\"Invalid query parameter\",\"type\":\"string\"},\"status\":{\"description\":\"Error status\",\"example\":\"error\",\"type\":\"string\"}},\"type\":\"object\"}}},\"description\":\"Bad request - missing or invalid query parameter\"},\"500\":{\"content\":{\"application/json\":{\"schema\":{\"properties\":{\"code\":{\"description\":\"Error code\",\"example\":400,\"type\":\"integer\"},\"message\":{\"description\":\"Error message\",\"example\":\"Invalid query parameter\",\"type\":\"string\"},\"status\":{\"description\":\"Error status\",\"example\":\"error\",\"type\":\"string\"}},\"type\":\"object\"}}},\"description\":\"Internal server error\"}},\"securitySource\":\"unspecified\"}", "source": "openapi3", "version": 1 }, "kind": "http", "method": "GET", "orig": "/youtube/search", "segments": [{ "lit": "youtube" }, { "lit": "search" }], "select": { "exist": ["query"] }, "transform": { "req": "`reqdata`", "res": "`body.results`" }, "index$": 0 }], "key$": "list" } }, "relations": { "ancestors": [] }, "key$": "you_tube", "name__orig": "you_tube", "Name": "YouTube", "name_": "you_tube", "name-": "you-tube", "NAME": "YOU_TUBE", "index$": 1 }, { "active": true, "entity": "you_tube", "key$": "BasicYouTubeFlow", "kind": "basic", "name": "BasicYouTubeFlow", "param": {}, "step": [{ "active": true, "data": {}, "input": {}, "match": {}, "op": "list", "spec": [], "valid": [{ "apply": "ItemExists", "def": { "ref": "you_tube_ref01" } }], "index$": 0 }] }, 'YouTube');
         }
         const client = setup.client;
         const struct = setup.struct;
@@ -101,12 +99,6 @@ function basicSetup(extra) {
                 '`$VAL`': ['`$FORMAT`', 'upper', '`$COPY`']
             }]
     });
-    // Detect whether the user provided a real ENTID JSON via env var. The
-    // basic flow consumes synthetic IDs from the fixture file; without an
-    // override those synthetic IDs reach the live API and 4xx. Surface this
-    // to the test so it can skip rather than fail.
-    const idmapEnvVal = process.env['CHOCOMILK_TEST_YOU_TUBE_ENTID'];
-    const idmapOverridden = null != idmapEnvVal && idmapEnvVal.trim().startsWith('{');
     const env = (0, utility_1.envOverride)({
         'CHOCOMILK_TEST_YOU_TUBE_ENTID': idmap,
         'CHOCOMILK_TEST_LIVE': 'FALSE',
@@ -114,7 +106,13 @@ function basicSetup(extra) {
     });
     idmap = env['CHOCOMILK_TEST_YOU_TUBE_ENTID'];
     const live = 'TRUE' === env.CHOCOMILK_TEST_LIVE;
+    const transport = (0, live_runner_1.createLiveTransport)();
     if (live) {
+        const rawIds = process.env['CHOCOMILK_TEST_YOU_TUBE_ENTID'];
+        idmap = rawIds && rawIds.trim() ? JSON.parse(rawIds) : {};
+        if (!idmap || Array.isArray(idmap) || typeof idmap !== 'object') {
+            throw new Error('Live ENTID must be a JSON object');
+        }
         client = new __1.ChocomilkSDK(merge([
             // FIRST, so the generated fields below win: sdk-test-control.json's
             // test.client.options adds to the live client, it does not redirect it.
@@ -125,7 +123,8 @@ function basicSetup(extra) {
             // argument at all - so a bare 'extra' silently discarded the apikey
             // and server values above and handed the SDK undefined. Harmless
             // while there was nothing in that object; not harmless now.
-            extra || {}
+            extra || {},
+            { system: { fetch: transport.fetch } }
         ]));
     }
     const setup = {
@@ -137,7 +136,7 @@ function basicSetup(extra) {
         data: entityData,
         explain: 'TRUE' === env.CHOCOMILK_TEST_EXPLAIN,
         live,
-        syntheticOnly: live && !idmapOverridden,
+        transport,
         now: Date.now(),
     };
     return setup;

@@ -4,7 +4,10 @@ declare(strict_types=1);
 // Chocomilk SDK feature factory
 
 require_once __DIR__ . '/feature/BaseFeature.php';
+require_once __DIR__ . '/feature/RatelimitFeature.php';
+require_once __DIR__ . '/feature/RetryFeature.php';
 require_once __DIR__ . '/feature/TestFeature.php';
+require_once __DIR__ . '/feature/TimeoutFeature.php';
 
 
 class ChocomilkFeatures
@@ -14,8 +17,14 @@ class ChocomilkFeatures
         switch ($name) {
             case "base":
                 return new ChocomilkBaseFeature();
+            case "ratelimit":
+                return new ChocomilkRatelimitFeature();
+            case "retry":
+                return new ChocomilkRetryFeature();
             case "test":
                 return new ChocomilkTestFeature();
+            case "timeout":
+                return new ChocomilkTimeoutFeature();
             default:
                 return new ChocomilkBaseFeature();
         }
@@ -31,7 +40,10 @@ class ChocomilkFeatures
     {
         switch ($name) {
             case "base":
+            case "ratelimit":
+            case "retry":
             case "test":
+            case "timeout":
                 return true;
             default:
                 return false;

@@ -1,12 +1,18 @@
 # Chocomilk SDK feature factory
 
 from chocomilk_sdk.feature.base_feature import ChocomilkBaseFeature
+from chocomilk_sdk.feature.ratelimit_feature import ChocomilkRatelimitFeature
+from chocomilk_sdk.feature.retry_feature import ChocomilkRetryFeature
 from chocomilk_sdk.feature.test_feature import ChocomilkTestFeature
+from chocomilk_sdk.feature.timeout_feature import ChocomilkTimeoutFeature
 
 
 _FEATURES = {
     "base": lambda: ChocomilkBaseFeature(),
+    "ratelimit": lambda: ChocomilkRatelimitFeature(),
+    "retry": lambda: ChocomilkRetryFeature(),
     "test": lambda: ChocomilkTestFeature(),
+    "timeout": lambda: ChocomilkTimeoutFeature(),
 }
 
 

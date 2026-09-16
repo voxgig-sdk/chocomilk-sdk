@@ -37,5 +37,131 @@
         "url": "sf5"
       }
     }
+  },
+  "requests": {
+    "GET /search/pinterest": {
+      "provenance": "operation-contract",
+      "contract": {
+        "operationId": "searchPinterest",
+        "parameters": [
+          {
+            "description": "Search query for Pinterest content",
+            "example": "minecraft",
+            "in": "query",
+            "name": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "protocol": "http",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "results": {
+                      "items": {
+                        "properties": {
+                          "author": {
+                            "description": "Pin author/creator",
+                            "type": "string"
+                          },
+                          "description": {
+                            "description": "Pin description",
+                            "type": "string"
+                          },
+                          "id": {
+                            "description": "Pinterest pin ID",
+                            "type": "string"
+                          },
+                          "image": {
+                            "description": "Pin image URL",
+                            "type": "string"
+                          },
+                          "title": {
+                            "description": "Pin title",
+                            "type": "string"
+                          },
+                          "url": {
+                            "description": "Pinterest pin URL",
+                            "type": "string"
+                          }
+                        },
+                        "type": "object"
+                      },
+                      "type": "array"
+                    },
+                    "status": {
+                      "description": "Response status",
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            },
+            "description": "Successful response with Pinterest search results"
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "code": {
+                      "description": "Error code",
+                      "example": 400,
+                      "type": "integer"
+                    },
+                    "message": {
+                      "description": "Error message",
+                      "example": "Invalid query parameter",
+                      "type": "string"
+                    },
+                    "status": {
+                      "description": "Error status",
+                      "example": "error",
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            },
+            "description": "Bad request - missing or invalid query parameter"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "code": {
+                      "description": "Error code",
+                      "example": 400,
+                      "type": "integer"
+                    },
+                    "message": {
+                      "description": "Error message",
+                      "example": "Invalid query parameter",
+                      "type": "string"
+                    },
+                    "status": {
+                      "description": "Error status",
+                      "example": "error",
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            },
+            "description": "Internal server error"
+          }
+        },
+        "securitySource": "unspecified"
+      }
+    }
   }
 }
